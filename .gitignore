@@ -1,0 +1,9 @@
+node_modules
+.idea
+*.iml
+.client
+config.json
+.DS_Store
+npm-debug.log
+bundle.js
+client/public/styles/css/*.css
