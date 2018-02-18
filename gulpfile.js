@@ -2,7 +2,7 @@ var gulp = require('gulp')
 var sass = require('gulp-sass')
 var plumber = require('gulp-plumber')
 var gutil = require('gulp-util')
-var rename = require('gulp-rename')
+var concat = require('gulp-concat')
 
 gulp.task('sass', function(){
   return gulp.src('client/**/*.scss')
@@ -11,8 +11,8 @@ gulp.task('sass', function(){
          this.emit('end')
      }))
     .pipe(sass())
-    .pipe(rename({dirname:''}))
-    .pipe(gulp.dest('client/public/styles/css'))
+    .pipe(concat('style.css'))
+    .pipe(gulp.dest('client/public/styles'))
 })
 
 gulp.task('watch', function(){

@@ -1,5 +1,4 @@
 var angular = require('angular')
-var axios = require('axios')
 
 var app = angular.module('app', [
     require('angular-ui-router')
