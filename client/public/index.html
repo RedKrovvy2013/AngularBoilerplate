@@ -2,13 +2,15 @@
 
 <html ng-app="app">
     <head>
-
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/style.css">
     </head>
-    <body ng-controller="main">
+    <body>
 
-        <div ui-view="content"></div>
+        <div id="header-container" ui-view="header"></div>
 
-        <script src='assets/bundle.js'></script>
+        <script src='bundle.js'></script>
 
     </body>
 </html>
