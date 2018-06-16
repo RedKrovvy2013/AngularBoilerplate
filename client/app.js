@@ -1,7 +1,8 @@
 var angular = require('angular')
 
 var app = angular.module('app', [
-    require('angular-ui-router')
+    require('angular-ui-router').default
+    // https://stackoverflow.com/questions/48771684/angular-1-6-9-uirouter-error-ngcpws-cant-copy-making-copies-of-window-or/50669244
 ])
 
 app.config(
@@ -17,8 +18,8 @@ app.config(
         .state('app', {
             url: '/',
             views: {
-                header: {
-                    template: require('./header/header.html')
+                content: {
+                    template: require('./content.html')
                 }
             }
         })
